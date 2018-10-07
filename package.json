@@ -1,7 +1,7 @@
 {
   "name": "burger",
   "version": "1.0.0",
-  "description": "",
+  "description": "* Eat-Da-Burger! is a restaurant app that lets users input the names of burgers they'd like to eat.",
   "main": "index.js",
   "scripts": {
     "start": "node server.js"
@@ -22,5 +22,6 @@
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
     "mysql": "^2.16.0"
-  }
+  },
+  "devDependencies": {}
 }
