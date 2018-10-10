@@ -18,16 +18,18 @@ router.get("/", function(req, res) {
             burgers: data
         };
         res.render("index", hbsObject);
+        // res.render("form");
+        // res.sendFile(__dirname + "../views/index.handlebars");
     });
 });
 
-router.post("/", function(req, res) {
-    cat.insertOne([ 
-        "burger_name"
+router.post("/burgers", function(req, res) {
+    burger.insertOne([ 
+        "burger_name", "devoured"
     ], [
-        req.body.burger_name
-    ], function(data) {
-        res.redirect("/");
+        req.body.burger_name, req.body.devoured
+    ], function(result) {
+        res.redirect("/burgers");
     });
 });
 
@@ -36,13 +38,8 @@ router.put("/burgers/:id", function(req, res) {
 
     burger.updateOne({
         devoured: true
-    }, condition, function(result) {
-        if (result.changedRows == 0) {
-            return res.status(404).end();
-        }
-        else {
-            res.status(200).end();
-        }
+    }, condition, function(data) {
+        res.redirect("/burgers")
     });
 });
 

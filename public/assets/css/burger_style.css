@@ -18,6 +18,9 @@ img {
     margin-left: 300px;
     padding-bottom: 20px;
 }
+#title2 {
+    margin-top: 70px;
+}
 
 #body, footer {
     padding-left: 50px;
@@ -36,3 +39,8 @@ img {
 ul, li {
     list-style: none;
 }
+/* button {
+    font-size: 20px;
+    width: 10px;
+    height: 10px;
+} */
